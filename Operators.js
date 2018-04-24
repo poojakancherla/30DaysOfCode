@@ -6,4 +6,4 @@ var tip = meal_cost * (tip_percent / 100);
 var tax = meal_cost * (tax_percent / 100); 
 var total_cost = meal_cost + tip + tax;
 
-console.log(total_cost);
+console.log(Math.round(total_cost));
