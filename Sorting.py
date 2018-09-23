@@ -11,7 +11,6 @@ for i in range(len(arr) - 1):
             arr[j+1] = temp
             flag = 1
     if flag == 0:
-        print('No more sorting needed')
         break
 
 print('Array is sorted in ' + str(count) + ' swaps')
