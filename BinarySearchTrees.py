@@ -8,17 +8,25 @@ class Solution:
             return Node(data)
         else:
             if data<=root.data:
-                cur=self.insert(root.left,data)
-                root.left=cur
+            #     if root.left is None:
+            #         root.left = root.data
+            #     else:
+            #         self.insert(root.left, root.data)
+                root.left=self.insert(root.left,data)
+                # root.left=cur
             else:
-                cur=self.insert(root.right,data)
-                root.right=cur
+                # if root.right is None:
+                #     root.right = root.data
+                # else:
+                #     self.insert(root.right, data)
+                root.right=self.insert(root.right,data)
+                # root.right=cur
         return root
 
     def getHeight(self,root):
         if root == None:
             return -1
-        return 1 + max(self.getHeight(root.left), self.getHeight(root.right)) 
+        return 1 + max(self.getHeight(root.left), self.getHeight(root.right))
 
 
 T=int(input())
